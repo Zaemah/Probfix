@@ -1,0 +1,238 @@
+body {
+    background: white;
+    color: rgb(10, 0, 0);
+  }
+  
+  .logo {
+    width: 200px;
+  }
+  
+  .heading, .participate {
+    margin: 100px;
+  }
+  
+  .navbar-brand {
+    margin-right: 150px;
+  }
+  
+  /* Navbar dropdown styles */
+  .nav-item {
+    position: relative;
+    list-style: none;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .nav-link:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  /* Dropdown menu styles */
+  .navbar-nav li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f9fa;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 180px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-nav li:hover > ul {
+    display: block;
+  }
+  
+  .navbar-nav li ul li {
+    width: 100%;
+  }
+  
+  .navbar-nav li ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  
+  .navbar-nav li ul li a:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+  }
+  
+  .navbar-nav li ul li.menu-has-children > ul {
+    top: 0;
+    left: 100%;
+  }
+  
+  .menu-has-children > a::after {
+    content: ' ▼';
+    font-size: 0.6em;
+    margin-left: 5px;
+  }
+  
+  /* Welcoming section styles */
+  .welcoming {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Dark overlay */
+      url("https://herway.net/wp-content/uploads/2019/08/closeup-photo-of-assorted-coins.jpg"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+    text-align: left;
+    margin-top: 100px;
+  }
+  
+  .welcoming h1,
+  .welcoming h2 {
+    position: absolute;
+    left: 20px;
+    color: white;
+    z-index: 10;
+  }
+  
+  .welcoming h1 {
+    font-weight: bold;
+    bottom: 60px;
+  }
+  
+  .welcoming h2 {
+    font-style: italic;
+    bottom: 20px;
+    font-size: 1.5rem;
+  }
+
+
+  .about {
+    padding: 60px 0 15px 0;
+    position: relative;
+}
+
+.about .row {
+    margin-bottom: 30px;
+}
+
+.about img {
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)
+}
+
+
+
+.about p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+.about .row {
+  display: flex;
+  align-items: stretch; /* Makes both columns equal in height */
+}
+
+.about .col-md-6,
+.about .col-lg-4,
+.about .col-lg-8 {
+  display: flex;
+  flex-direction: column;
+}
+
+.about img.img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop image to fill height without stretching */
+  border-radius: 8px; /* Optional: makes it look cleaner */
+}
+
+.btn-custom {
+  display: inline-block; /* Makes the anchor behave like a button */
+  margin: 30px auto; /* Centers the button horizontally */
+  padding: 10px 20px;
+  background-color: blue; /* Blue background */
+  color: white; /* White text */
+  font-size: 17px; /* Text size */
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none; /* Remove underline */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #0033cc; /* Darker blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #f8f9fa;
+}
+
+
+.about-intro {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Dark overlay */
+    url("https://cdn.prod.website-files.com/63a1cbc81b0e903002cf9cec/64023d8516e1dcf7ad67a9b5_Financial%20Wellness%20Month%3A%20Take%20Control%20of%20Your%20Finances%20.jpg"); /* Background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+  text-align: left;
+  margin-top: 100px;
+}
+
+
+.about-intro h1,
+  .about-intro h2 {
+    position: absolute;
+    left: 20px;
+    color: white;
+    z-index: 10;
+  }
+  
+  .about-intro h1 {
+    font-weight: bold;
+    bottom: 60px;
+  }
+  
+  .about-intro h2 {
+    font-style: italic;
+    bottom: 20px;
+    font-size: 1.5rem;
+  }
+
+  .about-info .row {
+    display: flex;
+    align-items: stretch; /* Makes both columns equal in height */
+  }
+  
+  .about-info .col-md-6,
+  .about-info .col-lg-4,
+  .about-info .col-lg-8 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about-info img.img-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crop image to fill height without stretching */
+    border-radius: 8px; /* Optional: makes it look cleaner */
+  }
+  
+  .coreValues img{
+    width: 100%;
+    height: auto;
+  }
