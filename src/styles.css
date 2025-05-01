@@ -307,4 +307,138 @@ body {
   }
 
 
-  
+
+
+/* Contact Section Container */
+.contact-section {
+  padding: 60px 20px;
+}
+
+/* Form Card */
+.contact-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Heading */
+.contact-section h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Form Fields */
+.contact-card .form-label {
+  font-weight: 600;
+}
+
+.contact-card .form-control {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Submit Button */
+.contact-card .btn {
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 15px;
+  }
+
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Office Addresses */
+.contact-section h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Social Media Icons */
+.contact-section .bi {
+  font-size: 1.8rem;
+  transition: transform 0.2s ease-in-out, color 0.2s;
+}
+
+.contact-section .bi:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .contact-section h4 {
+    font-size: 1.25rem;
+  }
+
+  .contact-section p {
+    font-size: 0.95rem;
+  }
+
+  .contact-section .bi {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 30px 15px;
+  }
+
+  .contact-section h4 {
+    text-align: center;
+  }
+
+  .contact-section .d-flex {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contact-section .bi {
+    margin: 0 10px;
+  }
+}
+
+/* Full page background for contact page only */
+.contact-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://www.openproject.org/assets/images/contact/hero-contact-4cf9fa21.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+.contact-section h2 {
+  color: black;
+}
+
