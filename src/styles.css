@@ -896,3 +896,193 @@ body {
     flex: 1 1 100%;
   }
 }
+
+
+/* Section Styling */
+.real-estate-section {
+  background-color: #f5f5f5; /* Light grey background */
+  padding: 60px 20px;
+}
+
+/* Container */
+.real-estate-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title */
+.real-estate-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Content Layout */
+.real-estate-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Text Content */
+.real-estate-text {
+  flex: 1 1 50%;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Images */
+.real-estate-images {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.real-estate-images img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .real-estate-content {
+    flex-direction: column;
+  }
+
+  .real-estate-text,
+  .real-estate-images {
+    flex: 1 1 100%;
+  }
+}
+
+
+
+/* Section Background */
+.realestate-hero {
+  background-color: #e0e0e0; /* Light grey */
+  padding: 60px 20px;
+}
+
+/* Layout Container */
+.realestate-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Text Column */
+.realestate-hero-text {
+  flex: 1 1 50%;
+}
+
+.realestate-hero-text h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+}
+
+/* Image Column */
+.realestate-hero-image {
+  flex: 1 1 45%;
+}
+
+.realestate-hero-image {
+  flex: 1 1 45%;
+  height: 100%;
+  min-height: 300px;
+}
+
+.realestate-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .realestate-hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .realestate-hero-text h2 {
+    font-size: 2rem;
+  }
+}
+
+
+/* Section Styling */
+.realestate-slider-section {
+  background: #f5f5f5;
+  padding: 40px 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slider Container */
+.slider-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Track for Sliding */
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-card {
+  width: 33.33%; /* 3 cards visible at a time */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.slider-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Navigation Arrows */
+.prev,
+.next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  z-index: 100;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Mobile: show 1 image at a time */
+@media (max-width: 768px) {
+  .slider-card {
+    width: 100%; /* 1 card visible at a time on mobile */
+  }
+}
