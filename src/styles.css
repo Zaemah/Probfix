@@ -790,3 +790,109 @@ body {
   color: #fff;
   text-decoration: none;
 }
+
+
+/* Section container */
+.subsidiary-container {
+  background-color: #acb1fa; /* Light grey */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+
+/* Section title */
+.subsidiary-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* Main card */
+.subsidiary-main-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Header */
+.subsidiary-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.subsidiary-icon {
+  width: 48px;
+  height: 48px;
+  margin-right: 1rem;
+}
+
+.subsidiary-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Subcards layout */
+.subsidiary-subcards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Individual subcard */
+.subsidiary-subcard {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 1rem;
+  flex: 1 1 140px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Learn More button */
+.subsidiary-learnmore-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.subsidiary-learnmore-btn {
+  display: inline-block;
+  background-color: #0077cc;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.subsidiary-learnmore-btn:hover {
+  background-color: #005fa3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .subsidiary-card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .subsidiary-icon {
+    margin: 0 0 1rem 0;
+  }
+
+  .subsidiary-subcards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .subsidiary-subcard {
+    flex: 1 1 100%;
+  }
+}
