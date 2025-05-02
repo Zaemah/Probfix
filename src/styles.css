@@ -695,3 +695,44 @@ body {
 .footer-section a:hover {
   text-decoration: underline;
 }
+
+
+.header-section {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://static.vecteezy.com/system/resources/thumbnails/002/883/744/small/hand-holding-growing-tree-on-coins-with-stock-graph-over-green-background-photo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 100px 20px 40px 20px;
+  color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.header-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.requirements-section {
+  padding: 40px 15px;
+}
+
+.requirement-box {
+  margin-bottom: 40px;
+}
+
+.requirement-box h3 {
+  color: #272044;
+  margin-bottom: 20px;
+}
+
+.custom-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
