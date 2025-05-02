@@ -635,6 +635,13 @@ margin-top: 70px;
   .team .team-img {
     width: 150px;
   }
+  .contact-section h2{
+    margin-top: 50px;
+  }
+
+  .contact-section{
+    margin-top: 50px;
+  }
 }
 
 .team-item {
@@ -1124,6 +1131,7 @@ margin-top: 70px;
     font-size: 2rem;
     margin-top: 40px;
   }
+
 }
 
 
