@@ -471,6 +471,17 @@ body {
   color: #3186f5;
   font-size: 1.5rem;
   margin-top: 30px;
+  text-decoration: solid;
+  text-transform: uppercase;
+  text-decoration-line: overline;
+}
+
+.team h2{
+  text-decoration: wavy;
+  font-size: 1.8rem;
+  margin-top: 50px;
+  text-decoration: solid;
+
 }
 
 .team p {
@@ -618,6 +629,58 @@ body {
 .service-card:hover {
   transform: translateY(-5px);
 }
+
+
+.testimonial {
+  background-color: #f8f9fa;
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.testimonial-client {
+  text-align: center;
+}
+
+.testimonial-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #40E0D0; /* Taqous Blue border around image */
+}
+
+.client-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #272044;
+}
+
+.client-position {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #777;
+}
+
+.testimonial h2 {
+  color: #272044;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.carousel-item {
+  padding: 30px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #40E0D0; /* Taqous Blue */
+}
+
 
 .footer-section {
   background-color: #212529; /* Dark gray */
