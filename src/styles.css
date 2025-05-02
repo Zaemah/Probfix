@@ -134,7 +134,7 @@ body {
  height: 350px;
  width: 100%;
  background-repeat: no-repeat;
-margin-top: 50px;
+margin-top: 70px;
  padding: 100px 20px 40px 20px;
  color: white;
  text-align: center;
@@ -167,6 +167,7 @@ margin-top: 50px;
 
   .welcoming-header h1 {
     font-size: 2rem;
+    margin-top: 50px;
   }
 
   .welcoming-header h2 {
@@ -1116,10 +1117,12 @@ margin-top: 50px;
   .realestate-hero-container {
     flex-direction: column;
     text-align: center;
+    margin-top: 40px;
   }
 
   .realestate-hero-text h2 {
     font-size: 2rem;
+    margin-top: 40px;
   }
 }
 
