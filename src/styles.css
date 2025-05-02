@@ -550,3 +550,71 @@ body {
 }
 
 
+/* Container background and text */
+.services-overview {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+}
+
+/* Service card base */
+.service-card {
+  background-color: rgb(29, 8, 219);
+  color: white;
+  border-radius: 10px;
+  padding: 30px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Text style inside card */
+.service-card h5 {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Image style */
+.service-card img {
+  max-height: 80px;
+  object-fit: contain;
+}
+
+/* Hover effect lines */
+.service-card::before,
+.service-card::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.service-card::before {
+  top: 0;
+  left: 0;
+  right: 100%;
+}
+
+.service-card::after {
+  bottom: 0;
+  left: 100%;
+  right: 0;
+}
+
+/* On hover: lines animate across */
+.service-card:hover::before {
+  right: 0;
+}
+
+.service-card:hover::after {
+  left: 0;
+}
+
+/* Optional: subtle hover lift */
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
