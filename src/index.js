@@ -17,3 +17,37 @@ function moveSlide(step) {
   const track = document.querySelector('.slider-track');
   track.style.transform = `translateX(-${slideIndex * 33.33}%)`;
 }
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const headingText = "WELCOME TO PROBFIX FINANCIAL SERVICES";
+    const subheadingText = "We are here to fix all your financial problems without hesitation and delays.";
+  
+    const headingElement = document.getElementById("welcome-heading");
+    const subheadingElement = document.getElementById("welcome-subheading");
+  
+    let headingIndex = 0;
+    let subheadingIndex = 0;
+  
+    function typeHeading() {
+      if (headingIndex < headingText.length) {
+        headingElement.textContent += headingText.charAt(headingIndex);
+        headingIndex++;
+        setTimeout(typeHeading, 80);
+      } else {
+        setTimeout(typeSubheading, 300); // short pause before subheading
+      }
+    }
+  
+    function typeSubheading() {
+      if (subheadingIndex < subheadingText.length) {
+        subheadingElement.textContent += subheadingText.charAt(subheadingIndex);
+        subheadingIndex++;
+        setTimeout(typeSubheading, 40);
+      }
+    }
+  
+    typeHeading();
+  });
+  

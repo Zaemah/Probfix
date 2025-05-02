@@ -98,64 +98,149 @@ body {
 }
 
 
-
-.welcoming {
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://herway.net/wp-content/uploads/2019/08/closeup-photo-of-assorted-coins.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  padding: 100px 20px 40px 20px;
-  color: white;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+/* Make the logo in the navbar bigger */
+.navbar .navbar-brand .logo {
+  width: 260px;  /* Increase the width of the logo */
+  height: auto;  /* Maintain aspect ratio */
+  transition: width 0.3s ease; /* Smooth transition for resizing */
 }
 
-.welcoming h1,
-.welcoming h2 {
+/* Optional: Hover effect to make logo slightly bigger when hovered */
+.navbar .navbar-brand .logo:hover {
+  width: 200px; /* Slight decrease on hover */
+}
+
+
+/* Increase text size for the navigation links */
+.navbar .navbar-nav .nav-link {
+  font-size: 25px; /* Increase text size */
+  font-weight: 400; /* Optional: Make the text a bit bolder */
+  transition: font-size 0.3s ease; /* Optional: smooth font size change */
+}
+
+/* Optional: Hover effect to increase text size when hovered */
+.navbar .navbar-nav .nav-link:hover {
+  font-size: 20px; /* Slight increase in font size on hover */
+  color: #007bff; /* Optional: change color on hover */
+}
+
+
+.welcoming-header {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://img.freepik.com/premium-photo/finance-investment-real-estate-business-concept_892776-134.jpg");
+  background-size: cover;
+  background-position: center;
+ height: 350px;
+ width: 100%;
+ background-repeat: no-repeat;
+margin-top: 50px;
+ padding: 100px 20px 40px 20px;
+ color: white;
+ text-align: center;
+ display: block;
+}
+ 
+
+.welcoming-header h1,
+.welcoming-header h2 {
   margin: 0;
   padding: 10px 0;
   z-index: 10;
 }
 
-.welcoming h1 {
+.welcoming-header h1 {
   font-size: 3rem;
   font-weight: bold;
 }
 
-.welcoming h2 {
+.welcoming-header h2 {
   font-size: 1.5rem;
   font-style: italic;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .welcoming {
+  .welcoming-header {
     padding: 80px 15px 30px 15px;
   }
 
-  .welcoming h1 {
+  .welcoming-header h1 {
     font-size: 2rem;
   }
 
-  .welcoming h2 {
+  .welcoming-header h2 {
     font-size: 1.2rem;
   }
 }
 
+.enquire-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #0099cc;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.enquire-button:hover {
+  background-color: #0077aa;
+  transform: scale(1.05);
+}
+
 @media (max-width: 480px) {
-  .welcoming h1 {
+  .welcoming-header h1 {
     font-size: 1.5rem;
   }
 
-  .welcoming h2 {
+  .welcoming-header h2 {
     font-size: 1rem;
   }
 }
+
+.welcome-section {
+  background-image:
+   url("https://www.pngmart.com/files/13/Blue-Abstract-PNG-File.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.welcoming-message h1,
+.welcoming-message h2 {
+  font-family: sans-serif;
+  white-space: pre-wrap;
+  font-weight: 700;
+}
+
+
+
+#cursor {
+  display: inline-block;
+  width: 10px;
+  background-color: white;
+  margin-left: 5px;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 
 
 
@@ -254,6 +339,11 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
+  .welcoming-message h1,
+.welcoming-message h2 {
+  font-weight: 200;
+}
   .about-intro {
     padding: 80px 15px 30px 15px;
   }
@@ -352,6 +442,18 @@ body {
 
   .contact-card {
     padding: 20px;
+  }
+
+  .navbar .navbar-nav .nav-link {
+    font-size: 17px;
+    font-weight: 200;
+    
+  }
+  
+
+  .navbar .navbar-nav .nav-link:hover {
+    font-size: 15px; 
+  
   }
 }
 
@@ -1082,6 +1184,7 @@ body {
 
 /* Mobile: show 1 image at a time */
 @media (max-width: 768px) {
+
   .slider-card {
     width: 100%; /* 1 card visible at a time on mobile */
   }
