@@ -226,7 +226,9 @@ margin-top: 70px;
   font-weight: 700;
 }
 
-
+.welcome-section h2{
+  font-style: italic;
+}
 
 #cursor {
   display: inline-block;
@@ -365,6 +367,10 @@ margin-top: 70px;
 
   .about-intro h2 {
     font-size: 1rem;
+  }
+
+  .welcome-section h2{
+    font-size: 15px;
   }
 }
 
