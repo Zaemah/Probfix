@@ -443,7 +443,7 @@ body {
   background-size: cover;
   padding: 40px 0 60px 0;
   text-align: center;
-  position: relative
+  position: relative;
 }
 
 .team::before {
@@ -496,7 +496,31 @@ body {
   border: 10px solid rgba(255, 255, 255, 0.1);
   margin: 0 auto 20px;
   border-radius: 8px;
-  box-shadow:
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .team h1 {
+    font-size: 1.8rem;
+  }
+
+  .team h3 {
+    font-size: 1.3rem;
+  }
+
+  .team p {
+    font-size: 0.95rem;
+    padding: 0 15px;
+  }
+
+  #fa-blog {
+    font-size: 60px;
+  }
+
+  .team .team-img {
+    width: 150px;
+  }
+}
 
 
 
