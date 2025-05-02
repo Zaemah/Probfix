@@ -462,18 +462,19 @@ body {
 }
 
 .team h1 {
-  color: #40E0D0;
+  color: #3186f5;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .team h3 {
-  color: #ffffff;
+  color: #3186f5;
   font-size: 1.5rem;
   margin-top: 30px;
 }
 
 .team p {
-  color: #40E0D0;
+  color: white;
   font-weight: 300;
   margin: 0 auto 20px;
   max-width: 700px;
@@ -481,7 +482,7 @@ body {
 
 #fa-blog {
   font-size: 80px;
-  color: #40E0D0;
+  color: #3186f5;
   margin-bottom: 20px;
 }
 
@@ -618,3 +619,16 @@ body {
   transform: translateY(-5px);
 }
 
+.footer-section {
+  background-color: #212529; /* Dark gray */
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.footer-section a {
+  color: #0dcaf0; /* Bootstrap info color */
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
