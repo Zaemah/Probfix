@@ -79,3 +79,20 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Failed to send message. Please try again.");
       });
   });
+
+
+  // Show the scroll-to-top button when the user scrolls down
+window.onscroll = function () {
+  let scrollToTopButton = document.getElementById("scroll-to-top");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollToTopButton.style.display = "flex";
+  } else {
+    scrollToTopButton.style.display = "none";
+  }
+};
+
+// Scroll to top when the button is clicked
+document.getElementById("scroll-to-top").addEventListener("click", function (event) {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
