@@ -1,22 +1,25 @@
 
-let slideIndex = 0;
+let currentIndex = 0;
 
-function moveSlide(step) {
-  const slides = document.querySelectorAll('.slider-card');
-  const totalSlides = slides.length;
-
-  slideIndex += step;
-  
-  if (slideIndex < 0) {
-    slideIndex = totalSlides - 3; // If it's less than 0, show the last 3 images
-  } else if (slideIndex > totalSlides - 3) {
-    slideIndex = 0; // If it's greater than the total number of images, go back to the start
-  }
-
-  // Move the slider track by adjusting its transform property
+function moveSlide(direction) {
   const track = document.querySelector('.slider-track');
-  track.style.transform = `translateX(-${slideIndex * 33.33}%)`;
+  const cards = document.querySelectorAll('.slider-card');
+  const cardWidth = cards[0].offsetWidth;
+  const visibleCards = window.innerWidth <= 768 ? 1 : 3;
+  const maxIndex = cards.length - visibleCards;
+
+  currentIndex += direction;
+
+  if (currentIndex < 0) currentIndex = 0;
+  if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+  track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 }
+
+window.addEventListener('resize', () => {
+  moveSlide(0); // Realign on resize
+});
+
 
 
 
