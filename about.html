@@ -35,41 +35,48 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+            </li>
   
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="subdiariesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Subdiaries
+                Services
               </a>
-              <ul class="dropdown-menu" aria-labelledby="subdiariesDropdown">
-              
-                <li class="dropdown-submenu">
-                  <a class="dropdown-item dropdown-toggle" href="realEstate.html">Real Estate</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="realEstate.html">Property Management</a></li>
-                    <li><a class="dropdown-item" href="realEstate.html">Property Sales</a></li>
-                    <li><a class="dropdown-item" href="realEstate.html">Property Valuations</a></li>
-                    <li><a class="dropdown-item" href="realEstate.html">Property Advisory</a></li>
-                  </ul></li>
-                <li><a class="dropdown-item" href="#">Drop Down 2</a></li>
-                <li class="dropdown-submenu">
-                  <a class="dropdown-item dropdown-toggle" href="#">Drop Down 3</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Drop Down 1</a></li>
-                    <li><a class="dropdown-item" href="#">Drop Down 2</a></li>
-                    <li><a class="dropdown-item" href="#">Drop Down 3</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-  
-            <li class="nav-item">
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="servicess.html">Financial Services</a></li>
+                <li><a class="dropdown-item" href="realEstate.html"> Estate Management</a></li>
+                <li><a class="dropdown-item" href="realEstate.html">Property Sales, Rental and Rental Management</a></li>
+                <li><a class="dropdown-item" href="realEstate.html">Property Valuations</a></li>
+                <li><a class="dropdown-item" href="realEstate.html">Property Advisory</a></li>
+                 </ul></li>
+                <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
+  
+   <!-- Social Media Icons using Bootstrap Icons -->
+<div class="social-icons d-flex">
+  <a href="https://instagram.com" target="_blank" class="nav-link px-2 text-primary">
+    <i class="bi bi-instagram"></i>
+  </a>
+  <a href="https://facebook.com" target="_blank" class="nav-link px-2 text-primary">
+    <i class="bi bi-facebook"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" class="nav-link px-2 text-primary">
+    <i class="bi bi-twitter-x"></i> <!-- Use `bi-twitter-x` for latest Twitter icon -->
+  </a>
+  <a href="https://linkedin.com" target="_blank" class="nav-link px-2 text-primary">
+    <i class="bi bi-linkedin"></i>
+  </a>
+</div>
+
+
         </div>
       </div>
     </nav>
   </header>
+  
   
           
   
@@ -158,18 +165,27 @@
         </div>
       </div>
 </div>
-    <div class="coreValues img-fluid">
-        <img src="images/CoreValues-03.png"/>
-    </div>
     
-  </section>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 d-flex justify-content-center">
+            <div class="coreValues p-4 rounded shadow">
+              <img src="images/core-values.jpg" alt="Core Values" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
   
   <section class="OurTeam">
     <div class="team" id="ourTeam">
       <div class="container">
-        <i class="fa fa-rss" id="fa-blog"></i>
+        <i class="bi bi-people-fill text-primary fs-1 mb-3"></i>
         <div class="owl-carousel team-carousel">
           <h1>Our Team</h1>
+
+          <div class="directors-team">
           <h2 class="text-white">Board of Directors</h2>
   
           <div class="team-item">
@@ -189,13 +205,14 @@
             <h3><em>Ratidzo A. Runyowa</em></h3>
             <p>Mrs. Runyowa is an HR practitioner. She holds a Bachelor of Commerce (Honours) degree in Human Resources Management from NUST. She also holds a diploma in Human Resource Development with IPMZ.</p>
           </div>
+          </div>
   
           <div class="team-item">
             <img src="images/chivore.jpg" alt="Vunganai Chivore" class="team-img image-fluid p-2 d-sm-block" />
             <h3><em>Vunganai Chivore</em></h3>
             <p>Mr. Chivore is a registered legal practitioner, notary public and conveyancer. He holds a Bachelor of Law (Honours) degree from the University of Zimbabwe. He is a Certified Financial Analyst (CFA) and has an MBA from NUST.</p>
           </div>
-  
+          <div class="management-team">
           <h2 class="text-white">Management</h2>
   
           <div class="team-item">
@@ -209,12 +226,73 @@
             <h3><em>Chenai Bandera</em></h3>
             <p>Miss Bandera is an accountant by profession. She holds a Bachelor of Commerce (Honours) degree in Accounting from Chinhoyi University of Technology (CUT). She is currently pursuing her ACCA studies.</p>
           </div>
+          </div>
   
         </div>
       </div>
     </div>
   </section>
   
+<section>
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+      <div class="property-card shadow-sm p-4 rounded d-flex justify-content-between align-items-center">
+        <p class="text-primary mb-0"><strong>Probfix Property Group</strong></p>
+        <a href="#" class="btn btn-primary">View Listing</a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</section>
+
+
+<section class="probfix-holdings-section py-5">
+<div class="container">
+  <div class="row d-flex flex-wrap justify-content-between">
+
+    
+    <div class="col-md-4 mb-4">
+      <h3 class="section-heading">Probfix Holdings</h3>
+      <p>
+        Probfix Holdings is a Zimbabwe-based investment holding company with interests in Microfinance, Real Estate,
+        Bureau De Change, Money Transfer/Remittances, Wealth Management, and Insurance.
+      </p>
+    </div>
+
+    <!-- Column 2: Services -->
+    <div class="col-md-4 mb-4">
+      <h3 class="section-heading">Services</h3>
+      <ul class="list-unstyled">
+        <li>Property Management</li>
+        <li>Property Sales</li>
+        <li>Property Valuations</li>
+        <li>Property Advisory</li>
+        <li>Salaried Employees</li>
+        <li>Asset Financing</li>
+        <li>Structured Finance</li>
+        <li>Business Loans</li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact -->
+    <div class="col-md-4 mb-4">
+      <h3 class="section-heading">Contact Us</h3>
+      <ul class="list-unstyled contact-list">
+        <li><i class="bi bi-geo-alt-fill me-2"></i>7 Chester Road, Avondale West, Harare, Zimbabwe</li>
+        <li><i class="bi bi-telephone-fill me-2"></i>+26371 896 2368</li>
+        <li><i class="bi bi-envelope-fill me-2"></i>info@probfix.co.zw</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+</section>
+
+
+
+
+
   <footer class="footer-section bg-dark text-white py-4">
     <div class="container text-center">
       <p class="mb-1">&copy; Copyright <strong>Probfix</strong>. All Rights Reserved</p>

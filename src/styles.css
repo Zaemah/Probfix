@@ -21,17 +21,36 @@ body {
   list-style: none;
 }
 
+
+
 .nav-link {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  color: #007bff;
+  color: black;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
 }
 
 .nav-link:hover {
-  background-color: #0056b3;
-  color: white;
+  border-bottom: 2px solid #007BFF; /* Replace with your preferred blue */
 }
+
+
+
+
+  
+  /* Social icons match styling */
+  .navbar .fa-brands {
+  color: #007bff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  margin-left: 0.5rem;
+  }
+  
+  .navbar .fa-brands:hover {
+  color: black;
+  }
 
 /* Dropdown menu styles */
 .navbar-nav li ul {
@@ -114,7 +133,7 @@ width: 200px; /* Slight decrease on hover */
 /* Increase text size for the navigation links */
 .navbar .navbar-nav .nav-link {
 font-size: 25px; /* Increase text size */
-font-weight: 400; /* Optional: Make the text a bit bolder */
+font-weight: 250; /* Optional: Make the text a bit bolder */
 transition: font-size 0.3s ease; /* Optional: smooth font size change */
 }
 
@@ -124,85 +143,117 @@ font-size: 20px; /* Slight increase in font size on hover */
 color: #007bff; /* Optional: change color on hover */
 }
 
-
-.welcoming-header {
-background-image: 
-  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("https://img.freepik.com/premium-photo/finance-investment-real-estate-business-concept_892776-134.jpg");
-background-size: cover;
-background-position: center;
-height: 350px;
-width: 100%;
-background-repeat: no-repeat;
-margin-top: 70px;
-padding: 100px 20px 40px 20px;
-color: white;
-text-align: center;
-display: block;
+.intro-slide-container {
+  position: relative;
+  max-width: 100%;
+  height: 70vh;
+  overflow: hidden;
 }
 
-
-.welcoming-header h1,
-.welcoming-header h2 {
-margin: 0;
-padding: 10px 0;
-z-index: 10;
+.intro-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
 }
 
-.welcoming-header h1 {
-font-size: 3rem;
-font-weight: bold;
+.intro-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.welcoming-header h2 {
-font-size: 1.5rem;
-font-style: italic;
+.intro-slide.active {
+  display: block;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-.welcoming-header {
-  padding: 80px 15px 30px 15px;
+.intro-slide-overlay-card {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid black;
+  padding: 20px;
+  color: white;
+  z-index: 2;
+  max-width: 90%;
+  border-radius: 10px;
+  animation: slideInRight 1s ease-out;
 }
 
-.welcoming-header h1 {
+.intro-slide-overlay-card h1 {
   font-size: 2rem;
-  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
-.welcoming-header h2 {
+.intro-slide-overlay-card h2 {
   font-size: 1.2rem;
-}
-}
-
-.enquire-button {
-display: inline-block;
-margin-top: 20px;
-padding: 12px 30px;
-background-color: #0099cc;
-color: white;
-font-weight: bold;
-font-size: 1rem;
-border: none;
-border-radius: 30px;
-text-decoration: none;
-transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 20px;
 }
 
-.enquire-button:hover {
-background-color: #0077aa;
-transform: scale(1.05);
-}
-
-@media (max-width: 480px) {
-.welcoming-header h1 {
-  font-size: 1.5rem;
-}
-
-.welcoming-header h2 {
+.intro-slide-overlay-card button {
+  padding: 10px 20px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
   font-size: 1rem;
 }
+
+.intro-slide-arrows {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
+
+.intro-slide-arrows button {
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 50%;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-slide-overlay-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro-slide-overlay-card h2 {
+    font-size: 1rem;
+  }
+
+  .intro-slide-overlay-card button {
+    font-size: 0.9rem;
+  }
+
+  .intro-slide-arrows {
+    flex-direction: row;
+    bottom: 10px;
+    right: 10px;
+    top: auto;
+    transform: none;
+  }
+}
+
 
 .welcome-section {
 background-image:
@@ -211,7 +262,7 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 width: 100%;
-min-height: 60vh;
+min-height: 40vh;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -223,7 +274,7 @@ text-align: center;
 .welcoming-message h2 {
 font-family: sans-serif;
 white-space: pre-wrap;
-font-weight: 700;
+font-weight: 500;
 }
 
 .welcome-section h2{
@@ -244,67 +295,51 @@ animation: blink 0.7s steps(1) infinite;
 }
 }
 
-
-
-
-.about {
-  padding: 60px 0 15px 0;
-  position: relative;
+.about-section {
+ text-align: center;
+  padding: 3rem 0;
+  
 }
 
-.about .row {
-  margin-bottom: 30px;
-}
-
-.about img {
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)
+/* Transparent box with shadow */
+.about-section {
+  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
 }
 
 
-
-
-
-.about .row {
-display: flex;
-align-items: stretch; /* Makes both columns equal in height */
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #000;
+  margin-bottom: 2rem;
 }
 
-.about .col-md-6,
-.about .col-lg-4,
-.about .col-lg-8 {
-display: flex;
-flex-direction: column;
-}
 
-.about img.img-fluid {
-width: 100%;
-height: 100%;
-object-fit: cover; /* Crop image to fill height without stretching */
-border-radius: 8px; /* Optional: makes it look cleaner */
-}
 
+/* Custom button */
 .btn-custom {
-display: inline-block; /* Makes the anchor behave like a button */
-margin: 30px auto; /* Centers the button horizontally */
-padding: 10px 20px;
-background-color: blue; /* Blue background */
-color: white; /* White text */
-font-size: 17px; /* Text size */
-font-weight: 400;
-text-align: center;
-letter-spacing: 1px;
-text-decoration: none; /* Remove underline */
-border-radius: 4px;
-cursor: pointer;
-transition: all 0.3s ease;
+  display: inline-block;
+  background-color: #ffffff;
+  color: black;
+  border: 2px solid #007BFF;
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .btn-custom:hover {
-background-color: #0033cc; /* Darker blue on hover */
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-color: #f8f9fa;
+  background-color: #007BFF;
+  color: #ffffff;
+  text-decoration: none;
 }
+
+
+
+
 
 
 .about-intro {
@@ -314,7 +349,7 @@ background-image:
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-min-height: 100vh;
+min-height: 60vh;
 padding: 100px 20px 40px 20px;
 color: white;
 text-align: left;
@@ -345,7 +380,7 @@ font-style: italic;
 
 .welcoming-message h1,
 .welcoming-message h2 {
-font-weight: 200;
+font-weight: 100;
 }
 .about-intro {
   padding: 80px 15px 30px 15px;
@@ -394,9 +429,13 @@ font-weight: 200;
   border-radius: 8px; /* Optional: makes it look cleaner */
 }
 
-.coreValues img{
-  width: 100%;
-  height: auto;
+
+
+.coreValues {
+  background-color: transparent;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1); /* Transparent soft shadow */
+  border-radius: 10px;
+  text-align: center;
 }
 
 
@@ -546,9 +585,10 @@ color: white;
 .contact-section h2 {
 color: black;
 }
+
+
 .team {
-background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-  url("https://www.shutterstock.com/image-vector/hand-united-together-form-lines-600nw-1246645873.jpg") center top no-repeat fixed;
+background:  url("https://www.shutterstock.com/image-vector/hand-united-together-form-lines-600nw-1246645873.jpg") center top no-repeat fixed;
 background-size: cover;
 padding: 40px 0 60px 0;
 text-align: center;
@@ -586,16 +626,14 @@ text-decoration-line: overline;
 }
 
 .team h2{
-text-decoration: wavy;
+text-decoration:overline;
 font-size: 1.8rem;
 margin-top: 50px;
-text-decoration: solid;
 
 }
 
 .team p {
-color: white;
-font-weight: 300;
+color: black;
 margin: 0 auto 20px;
 max-width: 700px;
 }
@@ -609,16 +647,24 @@ margin-bottom: 20px;
 .team .team-item {
 text-align: center;
 margin-bottom: 40px;
+background-color: white; 
+  padding: 2rem; /* Optional: add some padding */
+  border-radius: 8px; /* Optional: rounded corners */
+  width: 60vh;
+margin: 20px auto;
+border-radius: 10px;
+  
 }
 
 .team .team-img {
-width: 200px;
+width: 150px;
 height: auto;
-border: 10px solid rgba(255, 255, 255, 0.1);
 margin: 0 auto 20px;
-border-radius: 8px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+border-radius: 10px;
+
 }
+
+
 
 @media (max-width: 768px) {
 .team h1 {
@@ -641,28 +687,6 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 .team .team-img {
   width: 150px;
 }
-.contact-section h2{
-  margin-top: 50px;
-}
-
-.contact-section{
-  margin-top: 50px;
-}
-}
-
-.team-item {
-background-color: rgba(255, 255, 255, 0.05); /* transparent box */
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);   /* soft shadow */
-padding: 20px;
-margin: 20px auto;
-border-radius: 10px;
-backdrop-filter: blur(4px);                 /* adds a frosted-glass look */
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-item:hover {
-transform: translateY(-5px);
-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsive adjustments */
@@ -678,73 +702,82 @@ box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
 
-/* Container background and text */
+
+
 .services-overview {
-background-color: #007bff; /* Bootstrap primary blue */
-color: white;
-text-align: center;
-padding: 60px 0;
+  background-color: #f8f9fa; /* Off-white */
+  padding: 3rem 0;
 }
 
-/* Service card base */
-.service-card {
-background-color: rgb(29, 8, 219);
-color: white;
-border-radius: 10px;
-padding: 30px 20px;
-position: relative;
-overflow: hidden;
-transition: transform 0.3s ease;
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.services-overview .card {
+  background-color: transparent;
+  border: none;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); /* Soft transparent shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-/* Text style inside card */
-.service-card h5 {
-font-weight: 600;
-margin-top: 10px;
+.services-overview .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Slightly stronger on hover */
+  background-color: #007BFF; /* Blue background on hover */
 }
 
-/* Image style */
-.service-card img {
-max-height: 80px;
-object-fit: contain;
+.services-overview .card:hover i,
+.services-overview .card:hover h5,
+.services-overview .card:hover p,
+.services-overview .card:hover a {
+  color: #ffffff; /* White color for text and icons on hover */
 }
 
-/* Hover effect lines */
-.service-card::before,
-.service-card::after {
-content: "";
-position: absolute;
-height: 3px;
-background-color: #000;
-transition: all 0.3s ease;
+.services-overview i {
+  color: white;
 }
 
-.service-card::before {
-top: 0;
-left: 0;
-right: 100%;
+.services-overview h5 {
+  color: #007BFF; /* Blue headings */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-.service-card::after {
-bottom: 0;
-left: 100%;
-right: 0;
+.services-overview p {
+  color: #000000; /* Black text */
+  margin-bottom: 1rem;
 }
 
-/* On hover: lines animate across */
-.service-card:hover::before {
-right: 0;
+.services-overview a {
+  color: white; /* Blue learn more text */
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 
-.service-card:hover::after {
-left: 0;
+/* Default chevron icon style */
+.services-overview a i.bi-chevron-right {
+  color: #007BFF; /* Blue by default */
+  font-size: 1.3rem; /* Adjust size as needed */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Optional: subtle hover lift */
-.service-card:hover {
-transform: translateY(-5px);
+/* On hover: icon turns white */
+.services-overview a:hover i.bi-chevron-right {
+  color: #ffffff; /* White on hover */
 }
+
+
+.services-overview a:hover {
+  opacity: 0.8;
+}
+
+.services-overview a::after {
+  content: "";
+  color: white; /* Blue arrow */
+  margin-left: 5px;
+}
+
+.services-overview a:hover::after {
+  color: white; /* White arrow on hover */
+}
+
 
 
 .testimonial {
@@ -820,7 +853,7 @@ background-image:
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-min-height: 100vh;
+height: 60vh;
 padding: 100px 20px 40px 20px;
 color: white;
 text-align: left;
@@ -851,6 +884,61 @@ margin-bottom: 20px;
 list-style: disc;
 padding-left: 20px;
 }
+
+
+
+.financial-services {
+  background-color: #f9f9f9;
+  padding: 2rem 0;
+}
+
+/* Transparent shadow container */
+.shadow-container {
+  background-color: rgba(255, 255, 255, 0.6); /* almost transparent white */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* soft transparent shadow */
+  backdrop-filter: blur(5px); /* optional blur for glassmorphism effect */
+  -webkit-backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect */
+.shadow-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.shadow-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* Headings and paragraphs */
+.shadow-container h3 {
+  color: #007bff; /* Bootstrap primary blue */
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.shadow-container p {
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .shadow-container {
+    text-align: center;
+  }
+
+  .shadow-container h3 {
+    margin-top: 1rem;
+  }
+}
+
+
 
 .service-container {
 display: flex;
@@ -908,110 +996,65 @@ text-decoration: none;
 }
 
 
-/* Section container */
-.subsidiary-container {
-background-color: #429df1; /* Light grey */
-max-width: 1200px;
-margin: 0 auto;
-padding: 2rem 1rem;
+
+.guide-section {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 4rem 0;
 }
 
-
-/* Section title */
-.subsidiary-title {
-text-align: center;
-font-size: 2rem;
-margin-bottom: 2rem;
-font-weight: 700;
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #007bff; /* Primary blue color */
 }
 
-/* Main card */
-.subsidiary-main-card {
-background-color: #fff;
-border-radius: 16px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-padding: 2rem;
+.guide-section p {
+  font-size: 1.1rem;
+  color: #555;
 }
 
-/* Header */
-.subsidiary-card-header {
-display: flex;
-align-items: center;
-margin-bottom: 1.5rem;
-}
-
-.subsidiary-icon {
-width: 48px;
-height: 48px;
-margin-right: 1rem;
-}
-
-.subsidiary-heading {
-font-size: 1.5rem;
-font-weight: bold;
-}
-
-/* Subcards layout */
-.subsidiary-subcards {
-display: flex;
-flex-wrap: wrap;
-gap: 1rem;
-justify-content: center;
-}
-
-/* Individual subcard */
-.subsidiary-subcard {
-background-color: #f2f2f2;
-border-radius: 10px;
-padding: 1rem;
-flex: 1 1 140px;
-text-align: center;
-font-weight: 500;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-/* Learn More button */
-.subsidiary-learnmore-wrapper {
-margin-top: 2rem;
-text-align: center;
-}
-
-.subsidiary-learnmore-btn {
-display: inline-block;
-background-color: #0077cc;
-color: #fff;
-padding: 0.75rem 1.5rem;
-border-radius: 8px;
-font-weight: bold;
-text-decoration: none;
-transition: background-color 0.3s ease;
-}
-
-.subsidiary-learnmore-btn:hover {
-background-color: #005fa3;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-.subsidiary-card-header {
-  flex-direction: column;
-  align-items: center;
+/* Property Card Style */
+.property-card {
+  background-color: #ffffff; /* White background for the card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 2rem;
+  border-radius: 8px;
   text-align: center;
 }
 
-.subsidiary-icon {
-  margin: 0 0 1rem 0;
+.property-card h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 1rem;
 }
 
-.subsidiary-subcards {
-  flex-direction: column;
-  align-items: stretch;
+
+.probfix-holdings-section {
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-.subsidiary-subcard {
-  flex: 1 1 100%;
+.probfix-holdings-section .section-heading {
+  font-size: 1.5rem;
+  color: #007bff; /* Primary blue */
+  margin-bottom: 1rem;
 }
+
+.probfix-holdings-section p {
+  line-height: 1.6;
 }
+
+.probfix-holdings-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.probfix-holdings-section ul li i {
+  color: #007bff; /* Primary blue for icons */
+}
+
+
+
 
 
 /* Section Styling */
@@ -1024,6 +1067,19 @@ padding: 60px 20px;
 .real-estate-container {
 max-width: 1200px;
 margin: 0 auto;
+}
+
+.real-estate-container .shadow-container {
+  background-color: rgba(255, 255, 255, 0.05); /* semi-transparent white */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.real-estate-container .service-img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Title */
@@ -1081,7 +1137,7 @@ object-fit: cover;
 
 /* Section Background */
 .realestate-hero {
-background-color: #e0e0e0; /* Light grey */
+background-color: #007bff;
 padding: 60px 20px;
 }
 
@@ -1141,96 +1197,13 @@ border-radius: 12px;
 }
 
 
-/* Section Styling */
-.realestate-slider-section {
-background: #f5f5f5;
-padding: 40px 20px;
-overflow: hidden;
-position: relative;
+.real-estate-slide-container .card {
+  background-color: rgba(255, 255, 255, 0.05); /* Almost transparent */
+  border: none;
+  backdrop-filter: blur(6px);
 }
 
-/* Slider Container */
-.slider-wrapper {
-max-width: 1200px;
-margin: auto;
-position: relative;
-overflow: hidden;
-}
-
-/* Track for Sliding */
-.slider-track {
-display: flex;
-transition: transform 0.5s ease-in-out;
-}
-
-.slider-card {
-width: 33.33%; /* 3 cards visible at a time */
-padding: 10px;
-box-sizing: border-box;
-}
-
-.slider-card img {
-width: 100%;
-height: auto;
-object-fit: cover;
-border-radius: 12px;
-}
-
-/* Navigation Arrows */
-.prev,
-.next {
-background-color: rgba(0, 0, 0, 0.5);
-color: white;
-border: none;
-padding: 10px;
-cursor: pointer;
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-font-size: 24px;
-z-index: 100;
-}
-
-.prev {
-left: 10px;
-}
-
-.next {
-right: 10px;
-}
-
-/* Mobile: show 1 image at a time */
-@media (max-width: 768px) {
-
-.slider-card {
-  width: 100%; /* 1 card visible at a time on mobile */
-}
-}
-
-
-
-
-/* Base nav link style */
-.navbar-nav .nav-link {
-color: #007bff; /* Bootstrap primary blue */
-font-weight: 500;
-transition: color 0.3s ease;
-}
-
-/* Active or hovered link */
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-color: #0056b3; /* Darker blue on hover/active */
-}
-
-/* Social icons match styling */
-.navbar .fa-brands {
-color: #007bff;
-font-size: 1.2rem;
-transition: color 0.3s ease;
-margin-left: 0.5rem;
-}
-
-.navbar .fa-brands:hover {
-color: #0056b3;
+.real-estate-slide-container .carousel-inner img {
+  height: 250px;
+  object-fit: cover;
 }
