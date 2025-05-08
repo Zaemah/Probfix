@@ -800,7 +800,7 @@ text-align: center;
 width: 100px;
 height: 100px;
 object-fit: cover;
-border: 3px solid #40E0D0; /* Taqous Blue border around image */
+border: 3px solid #007bff; /*  Blue border around image */
 }
 
 .client-name {
@@ -827,18 +827,18 @@ padding: 30px;
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-background-color: #40E0D0; /* Taqous Blue */
+background-color: #007bff; /*  Blue */
 }
 
 
 .footer-section {
-background-color: #212529; /* Dark gray */
-color: #ffffff;
+background-color: #b9c2ca; /* Dark gray */
+color: black;
 font-size: 14px;
 }
 
 .footer-section a {
-color: #0dcaf0; /* Bootstrap info color */
+color: #007bff; /* Bootstrap info color */
 }
 
 .footer-section a:hover {
