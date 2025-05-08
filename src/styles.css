@@ -573,7 +573,7 @@ opacity: 0.9;
 
 /* Full page background for contact page only */
 .contact-page {
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+background-image: 
   url("https://www.openproject.org/assets/images/contact/hero-contact-4cf9fa21.png");
 background-size: cover;
 background-position: center;
