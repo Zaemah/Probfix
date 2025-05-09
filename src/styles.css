@@ -1,6 +1,6 @@
 body {
   background: white;
-  color: rgb(10, 0, 0);
+  color: #0e163d;
 }
 
 .logo {
@@ -37,19 +37,21 @@ body {
 }
 
 
-
+.text-taqous {
+  color: #2eade3 !important;
+}
 
   
   /* Social icons match styling */
-  .navbar .fa-brands {
+  .navbar .bi {
   color: #2eade3;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   transition: color 0.3s ease;
   margin-left: 0.5rem;
   }
   
-  .navbar .fa-brands:hover {
-  color: black;
+  .navbar .bi:hover {
+  color: #0e163d;
   }
 
 /* Dropdown menu styles */
@@ -171,7 +173,7 @@ color: #2eade3; /* Optional: change color on hover */
   bottom: 5%;
   right: 5%;
   background: rgba(0, 0, 0, 0.3);
-  border: 2px solid black;
+  border: 2px solid #0e163d;
   padding: 20px;
   color: white;
   z-index: 2;
@@ -193,7 +195,7 @@ color: #2eade3; /* Optional: change color on hover */
 .intro-slide-overlay-card button {
   padding: 10px 20px;
   border: none;
-  background-color: black;
+  background-color: #0e163d;
   color: white;
   cursor: pointer;
   border-radius: 5px;
@@ -212,7 +214,7 @@ color: #2eade3; /* Optional: change color on hover */
 }
 
 .intro-slide-arrows button {
-  background: rgba(0,0,0,0.5);
+  background: #0e163d;
   border: none;
   color: white;
   padding: 10px;
@@ -313,7 +315,7 @@ animation: blink 0.7s steps(1) infinite;
 .about-section p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #000;
+  color: #0e163d;
   margin-bottom: 2rem;
 }
 
@@ -323,7 +325,7 @@ animation: blink 0.7s steps(1) infinite;
 .btn-custom {
   display: inline-block;
   background-color: #ffffff;
-  color: black;
+  color: #0e163d;
   border: 2px solid #2eade3;
   padding: 10px 24px;
   border-radius: 6px;
@@ -582,7 +584,7 @@ color: white;
 }
 
 .contact-section h2 {
-color: black;
+color: #0e163d;
 }
 
 
@@ -639,7 +641,7 @@ max-width: 700px;
 
 #fa-blog {
 font-size: 80px;
-color: #3186f5;
+color: #2eade3;
 margin-bottom: 20px;
 }
 
@@ -723,7 +725,7 @@ border-radius: 10px;
 .services-overview .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Slightly stronger on hover */
-  background-color: #007BFF; /* Blue background on hover */
+  background-color: #2eade3; /* Blue background on hover */
 }
 
 .services-overview .card:hover i,
@@ -738,13 +740,13 @@ border-radius: 10px;
 }
 
 .services-overview h5 {
-  color: #007BFF; /* Blue headings */
+  color: #2eade3; /* Blue headings */
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .services-overview p {
-  color: #000000; /* Black text */
+  color: #0e163d; /* Black text */
   margin-bottom: 1rem;
 }
 
@@ -757,7 +759,7 @@ border-radius: 10px;
 
 /* Default chevron icon style */
 .services-overview a i.bi-chevron-right {
-  color: #007BFF; /* Blue by default */
+  color: #2eade3; /* Blue by default */
   font-size: 1.3rem; /* Adjust size as needed */
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -802,7 +804,7 @@ background-color: #f8f9fa;
 .testimonial-text {
 font-size: 1.2rem;
 font-weight: 300;
-color: #333;
+color: #0e163d;
 max-width: 600px;
 margin: 0 auto;
 }
@@ -815,23 +817,23 @@ text-align: center;
 width: 100px;
 height: 100px;
 object-fit: cover;
-border: 3px solid #007bff; /*  Blue border around image */
+border: 3px solid #2eade3; /*  Blue border around image */
 }
 
 .client-name {
 font-size: 1.5rem;
 font-weight: 500;
-color: #272044;
+color: #0e163d;
 }
 
 .client-position {
 font-size: 1rem;
 font-weight: 400;
-color: #777;
+color: #0e163d;
 }
 
 .testimonial h2 {
-color: #272044;
+color: #0e163d;
 font-size: 2rem;
 font-weight: 700;
 }
@@ -842,18 +844,18 @@ padding: 30px;
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-background-color: #007bff; /*  Blue */
+background-color: #2eade3; /*  Blue */
 }
 
 
 .footer-section {
-background-color: #dfe9f5;
-color: black;
+background-color: #0e163d;
+color: white;
 font-size: 14px;
 }
 
 .footer-section a {
-color: #007bff; /* Bootstrap info color */
+color: #2eade3; /* Bootstrap info color */
 }
 
 .footer-section a:hover {
@@ -891,7 +893,7 @@ margin-bottom: 40px;
 }
 
 .requirement-box h3 {
-color: #272044;
+color: #0e163d;
 margin-bottom: 20px;
 }
 
@@ -931,13 +933,13 @@ padding-left: 20px;
 
 /* Headings and paragraphs */
 .shadow-container h3 {
-  color: #007bff; /* Bootstrap primary blue */
+  color: #2eade3; 
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .shadow-container p {
-  color: #000;
+  color: #0e163d;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -973,7 +975,7 @@ box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .card h3 {
-color: #007bbf;
+color: #2eade3;
 border-bottom: 1px solid #eee;
 padding-bottom: 10px;
 }
@@ -985,12 +987,12 @@ padding-left: 0;
 
 .card ul li::before {
 content: "✔ ";
-color: #00b894;
+color: #2eade3;
 margin-right: 5px;
 }
 
 .loans-banner {
-background: #00a8e8;
+background: #2eade3;
 color: white;
 text-align: center;
 padding: 20px;
@@ -999,7 +1001,7 @@ font-weight: bold;
 }
 
 .service-contact {
-background-color: #004e74;
+background-color: #2eade3;
 color: white;
 padding: 20px;
 text-align: center;
@@ -1020,7 +1022,7 @@ text-decoration: none;
 .section-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #007bff; /* Primary blue color */
+  color: #2eade3; 
 }
 
 .guide-section p {
@@ -1040,19 +1042,19 @@ text-decoration: none;
 .property-card h5 {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #007bff;
+  color: #2eade3;
   margin-bottom: 1rem;
 }
 
 
 .probfix-holdings-section {
   background-color: #f9f9f9;
-  color: #333;
+  color: #0e163d;
 }
 
 .probfix-holdings-section .section-heading {
   font-size: 1.5rem;
-  color: #007bff; /* Primary blue */
+  color: #2eade3; /* Primary blue */
   margin-bottom: 1rem;
 }
 
@@ -1065,7 +1067,7 @@ text-decoration: none;
 }
 
 .probfix-holdings-section ul li i {
-  color: #007bff; /* Primary blue for icons */
+  color: #2eade3; 
 }
 
 
@@ -1103,7 +1105,7 @@ text-align: center;
 font-size: 2.5rem;
 font-weight: bold;
 margin-bottom: 40px;
-color: #333;
+color: #0e163d;
 }
 
 /* Content Layout */
@@ -1119,7 +1121,7 @@ align-items: flex-start;
 flex: 1 1 50%;
 font-size: 1rem;
 line-height: 1.6;
-color: #555;
+color: #0e163d;
 }
 
 /* Images */
@@ -1152,7 +1154,7 @@ object-fit: cover;
 
 /* Section Background */
 .realestate-hero {
-background-color: #007bff;
+background-color: #2eade3;
 padding: 60px 20px;
 }
 
@@ -1173,7 +1175,7 @@ flex: 1 1 50%;
 
 .realestate-hero-text h2 {
 font-size: 2.5rem;
-color: #333;
+color: #0e163d;
 font-weight: 700;
 }
 
@@ -1230,7 +1232,7 @@ border-radius: 12px;
   right: 30px;
   z-index: 1000;
   display: none;
-  background-color: #007bff;
+  background-color: #2eade3;
   color: white;
   font-size: 24px;
   width: 50px;
@@ -1241,7 +1243,7 @@ border-radius: 12px;
 }
 
 #scroll-to-top:hover {
-  background-color: #0056b3;
+  background-color: #0e163d;
 }
 
 
@@ -1250,11 +1252,11 @@ border-radius: 12px;
 /* Base spacing and styling */
 .probfix-holdings-section {
   background-color: rgba(255, 255, 255, 0.03); /* optional light transparent bg */
-  color: #333;
+  color: #0e163d;
 }
 
 .probfix-holdings-section .section-heading {
-  color: #007bff; /* Bootstrap primary blue */
+  color: #2eade3; /* Bootstrap primary blue */
   font-weight: 600;
 }
 
@@ -1272,3 +1274,26 @@ border-radius: 12px;
     padding-left: 0;
   }
 }
+
+
+.btn-primary {
+  background-color: #2eade3 !important;
+  border-color: #2eade3 !important;
+}
+
+.btn-primary:hover {
+  background-color: #0e163d !important; /* optional darker shade for hover */
+  border-color: #0e163d !important;
+}
+
+
+.contact-socials .bi {
+  color: #2eade3;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+  margin-left: 0.5rem;
+  }
+  
+   .contact-socials.bi:hover {
+  color: #0e163d;
+  }
