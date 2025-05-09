@@ -33,7 +33,7 @@ body {
 }
 
 .nav-link:hover {
-  border-bottom: 2px solid #007BFF; /* Replace with your preferred blue */
+  border-bottom: 2px solid #2eade3; /* Replace with your preferred blue */
 }
 
 
@@ -42,7 +42,7 @@ body {
   
   /* Social icons match styling */
   .navbar .fa-brands {
-  color: #007bff;
+  color: #2eade3;
   font-size: 1.2rem;
   transition: color 0.3s ease;
   margin-left: 0.5rem;
@@ -85,7 +85,7 @@ body {
 
 .navbar-nav li ul li a:hover {
   background-color: #f8f9fa;
-  color: #007bff;
+  color: #2eade3;
 }
 
 .navbar-nav li ul li.menu-has-children > ul {
@@ -140,7 +140,7 @@ transition: font-size 0.3s ease; /* Optional: smooth font size change */
 /* Optional: Hover effect to increase text size when hovered */
 .navbar .navbar-nav .nav-link:hover {
 font-size: 20px; /* Slight increase in font size on hover */
-color: #007bff; /* Optional: change color on hover */
+color: #2eade3; /* Optional: change color on hover */
 }
 
 .intro-slide-container {
@@ -324,7 +324,7 @@ animation: blink 0.7s steps(1) infinite;
   display: inline-block;
   background-color: #ffffff;
   color: black;
-  border: 2px solid #007BFF;
+  border: 2px solid #2eade3;
   padding: 10px 24px;
   border-radius: 6px;
   text-decoration: none;
@@ -332,7 +332,7 @@ animation: blink 0.7s steps(1) infinite;
 }
 
 .btn-custom:hover {
-  background-color: #007BFF;
+  background-color: #2eade3;
   color: #ffffff;
   text-decoration: none;
 }
@@ -610,13 +610,13 @@ z-index: 2;
 }
 
 .team h1 {
-color: #3186f5;
+color: #2eade3;
 margin-bottom: 20px;
 text-transform: uppercase;
 }
 
 .team h3 {
-color: #3186f5;
+color: #2eade3;
 font-size: 1.5rem;
 margin-top: 30px;
 text-decoration: solid;
